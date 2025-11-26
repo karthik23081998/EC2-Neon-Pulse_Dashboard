@@ -3,7 +3,7 @@ ADD . /app
 WORKDIR /app
 RUN pip install --prefix=/devops -r requirements.txt
 
-FROM python:3.12-slim as RUN
+FROM python:3.12-slim as run 
 LABEL project="python project"
 LABEL author="devops"
 COPY --from=build /app /aws 
